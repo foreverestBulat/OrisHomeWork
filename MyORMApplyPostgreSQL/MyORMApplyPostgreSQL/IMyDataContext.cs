@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyORM
+namespace MyORMApplyPostgreSQL
 {
     public interface IMyDataContext
     {
+        public string ConnectionString { get; }
         public void Add<T>(T row) where T : class;
         public void Update<T>(T row) where T : class;
         public void Delete<T>(int id) where T : class;
